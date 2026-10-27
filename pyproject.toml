@@ -1,0 +1,41 @@
+[project]
+name = "ueba"
+version = "0.1.0"
+description = "Insider-threat file-access UEBA agent: baselines, anomaly detection, RAG policy grounding, privacy-preserving case summaries"
+requires-python = ">=3.11"
+dependencies = [
+    "faiss-cpu>=1.15.1",
+    "faker>=40.43.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.4.6",
+    "pandas>=3.1.0",
+    "pyarrow>=26.0.0",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.66.1",
+]
+
+[tool.uv]
+# The parent folder name contains ':' which breaks editable installs and `uv run`;
+# run tools via .venv/bin/python with src/ on the path instead.
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+mypy_path = "src"
+packages = ["ueba"]
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*", "faker.*", "streamlit.*", "pyarrow.*"]
+ignore_missing_imports = true
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pandas-stubs>=3.0.5.260914",
+    "pytest>=9.1.1",
+]

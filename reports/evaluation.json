@@ -1,0 +1,1756 @@
+{
+  "settings": {
+    "generated": "2026-10-26T23:26:06",
+    "mode": "full",
+    "seeds": [
+      101,
+      102,
+      103
+    ],
+    "users": 120,
+    "detector": "isolation_forest",
+    "llm": "ollama:gemma4",
+    "rag": "hybrid:tfidf+ollama:embeddinggemma",
+    "cert": true
+  },
+  "detection": [
+    {
+      "dataset": "synthetic-seed101",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 1.0,
+      "ml_auc": 0.9361904761904762,
+      "ml_precision_at_k": 0.3333333333333333,
+      "seconds": 0.2895961249996617
+    },
+    {
+      "dataset": "synthetic-seed102",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.8666666666666667,
+      "ml_auc": 0.9631746031746032,
+      "ml_precision_at_k": 0.7333333333333333,
+      "seconds": 0.33244399999966845
+    },
+    {
+      "dataset": "synthetic-seed103",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9923809523809524,
+      "ml_precision_at_k": 0.9333333333333333,
+      "seconds": 0.2820194170017203
+    },
+    {
+      "dataset": "cert_r4.2",
+      "precision": 0.5811965811965812,
+      "recall": 0.9714285714285714,
+      "f1": 0.7272727272727273,
+      "precision_at_k": 0.6857142857142857,
+      "ml_auc": 0.9680798771121353,
+      "ml_precision_at_k": 0.5857142857142857,
+      "seconds": 6.621567750000395
+    }
+  ],
+  "rq1": [
+    {
+      "dataset": "synthetic-seed101",
+      "detector": "baseline_zscore",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9892063492063492,
+      "ml_precision_at_k": 0.8666666666666667,
+      "seconds": 0.20528316700074356
+    },
+    {
+      "dataset": "synthetic-seed101",
+      "detector": "isolation_forest",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 1.0,
+      "ml_auc": 0.9361904761904762,
+      "ml_precision_at_k": 0.3333333333333333,
+      "seconds": 0.2895961249996617
+    },
+    {
+      "dataset": "synthetic-seed101",
+      "detector": "lof",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 1.0,
+      "ml_auc": 0.9523809523809523,
+      "ml_precision_at_k": 0.3333333333333333,
+      "seconds": 0.2101238329996704
+    },
+    {
+      "dataset": "synthetic-seed101",
+      "detector": "ocsvm",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 1.0,
+      "ml_auc": 0.8904761904761904,
+      "ml_precision_at_k": 0.06666666666666667,
+      "seconds": 0.19209308299832628
+    },
+    {
+      "dataset": "synthetic-seed102",
+      "detector": "baseline_zscore",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.994920634920635,
+      "ml_precision_at_k": 0.8666666666666667,
+      "seconds": 0.18488050000087242
+    },
+    {
+      "dataset": "synthetic-seed102",
+      "detector": "isolation_forest",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.8666666666666667,
+      "ml_auc": 0.9631746031746032,
+      "ml_precision_at_k": 0.7333333333333333,
+      "seconds": 0.33244399999966845
+    },
+    {
+      "dataset": "synthetic-seed102",
+      "detector": "lof",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9666666666666667,
+      "ml_precision_at_k": 0.5333333333333333,
+      "seconds": 0.21503391700025531
+    },
+    {
+      "dataset": "synthetic-seed102",
+      "detector": "ocsvm",
+      "precision": 0.8823529411764706,
+      "recall": 1.0,
+      "f1": 0.9375,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.8952380952380953,
+      "ml_precision_at_k": 0.13333333333333333,
+      "seconds": 0.19863991600141162
+    },
+    {
+      "dataset": "synthetic-seed103",
+      "detector": "baseline_zscore",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9752380952380953,
+      "ml_precision_at_k": 0.8,
+      "seconds": 0.17839508299948648
+    },
+    {
+      "dataset": "synthetic-seed103",
+      "detector": "isolation_forest",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9923809523809524,
+      "ml_precision_at_k": 0.9333333333333333,
+      "seconds": 0.2820194170017203
+    },
+    {
+      "dataset": "synthetic-seed103",
+      "detector": "lof",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9476190476190476,
+      "ml_precision_at_k": 0.3333333333333333,
+      "seconds": 0.21384654199937358
+    },
+    {
+      "dataset": "synthetic-seed103",
+      "detector": "ocsvm",
+      "precision": 0.9375,
+      "recall": 1.0,
+      "f1": 0.967741935483871,
+      "precision_at_k": 0.9333333333333333,
+      "ml_auc": 0.9047619047619048,
+      "ml_precision_at_k": 0.13333333333333333,
+      "seconds": 0.19296299999768962
+    },
+    {
+      "dataset": "cert_r4.2",
+      "detector": "baseline_zscore",
+      "precision": 0.5811965811965812,
+      "recall": 0.9714285714285714,
+      "f1": 0.7272727272727273,
+      "precision_at_k": 0.5714285714285714,
+      "ml_auc": 0.948494623655914,
+      "ml_precision_at_k": 0.44285714285714284,
+      "seconds": 6.0222702079990995
+    },
+    {
+      "dataset": "cert_r4.2",
+      "detector": "isolation_forest",
+      "precision": 0.5811965811965812,
+      "recall": 0.9714285714285714,
+      "f1": 0.7272727272727273,
+      "precision_at_k": 0.6857142857142857,
+      "ml_auc": 0.9680798771121353,
+      "ml_precision_at_k": 0.5857142857142857,
+      "seconds": 6.621567750000395
+    },
+    {
+      "dataset": "cert_r4.2",
+      "detector": "lof",
+      "precision": 0.5811965811965812,
+      "recall": 0.9714285714285714,
+      "f1": 0.7272727272727273,
+      "precision_at_k": 0.6428571428571429,
+      "ml_auc": 0.8390015360983102,
+      "ml_precision_at_k": 0.07142857142857142,
+      "seconds": 28.677417665996472
+    },
+    {
+      "dataset": "cert_r4.2",
+      "detector": "ocsvm",
+      "precision": 0.5811965811965812,
+      "recall": 0.9714285714285714,
+      "f1": 0.7272727272727273,
+      "precision_at_k": 0.6428571428571429,
+      "ml_auc": 0.9638709677419355,
+      "ml_precision_at_k": 0.5571428571428572,
+      "seconds": 8.456777499999589
+    }
+  ],
+  "rq2": [
+    {
+      "scenario": "mass_download",
+      "level": 0,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 2.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "after_hours",
+      "level": 0,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 2.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 0,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 1.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 0,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 2.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 0,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 1.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.3333333333333333,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 83,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.18072289156626506
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 22,
+      "recall": 0.045454545454545456,
+      "rule_recall": NaN,
+      "ml_recall": 0.6363636363636364
+    },
+    {
+      "scenario": "mass_download",
+      "level": 0,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 2.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "after_hours",
+      "level": 0,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 2.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 0,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 1.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 0,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 2.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 0,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 1.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 84,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.17857142857142858
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 21,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.5714285714285714
+    },
+    {
+      "scenario": "mass_download",
+      "level": 0,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 2.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "after_hours",
+      "level": 0,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 2.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 0,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 1.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 0,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 2.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 0,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 1.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.3333333333333333,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 81,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.24691358024691357
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 0,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 24,
+      "recall": 0.041666666666666664,
+      "rule_recall": NaN,
+      "ml_recall": 0.7083333333333334
+    },
+    {
+      "scenario": "mass_download",
+      "level": 1,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 3.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 1,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 4.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 1,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 2.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 1,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 4.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 1,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 2.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.3333333333333333,
+      "ml_recall": 0.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 83,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.1927710843373494
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 22,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.6363636363636364
+    },
+    {
+      "scenario": "mass_download",
+      "level": 1,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 3.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "after_hours",
+      "level": 1,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 4.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 1,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 2.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 1,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 4.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 1,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 2.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.3333333333333333,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 84,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.15476190476190477
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 21,
+      "recall": 0.047619047619047616,
+      "rule_recall": NaN,
+      "ml_recall": 0.47619047619047616
+    },
+    {
+      "scenario": "mass_download",
+      "level": 1,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 3.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "after_hours",
+      "level": 1,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 4.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 1,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 2.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 1,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 4.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 1,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 2.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.6666666666666666,
+      "rule_recall": 0.6666666666666666,
+      "ml_recall": 0.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 81,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.1728395061728395
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 1,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 24,
+      "recall": 0.041666666666666664,
+      "rule_recall": NaN,
+      "ml_recall": 0.5416666666666666
+    },
+    {
+      "scenario": "mass_download",
+      "level": 2,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 5.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 2,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 8.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 2,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 4.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 2,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 6.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 2,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 3.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.3333333333333333,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 83,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.25301204819277107
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 22,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.5909090909090909
+    },
+    {
+      "scenario": "mass_download",
+      "level": 2,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 5.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "after_hours",
+      "level": 2,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 8.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 2,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 4.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 2,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 6.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 2,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 3.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.6666666666666666,
+      "rule_recall": 0.6666666666666666,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 84,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.2261904761904762
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 21,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "mass_download",
+      "level": 2,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 5.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "after_hours",
+      "level": 2,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 8.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 2,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 4.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.0,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 2,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 6.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 2,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 3.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.6666666666666666,
+      "rule_recall": 0.6666666666666666,
+      "ml_recall": 0.3333333333333333
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 81,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.09876543209876543
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 2,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 24,
+      "recall": 0.08333333333333333,
+      "rule_recall": NaN,
+      "ml_recall": 0.7916666666666666
+    },
+    {
+      "scenario": "mass_download",
+      "level": 3,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 10.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 0.6666666666666666,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 3,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 15.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 3,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 8.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 3,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 10.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 3,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 5.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 83,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.1927710843373494
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 22,
+      "recall": 0.045454545454545456,
+      "rule_recall": NaN,
+      "ml_recall": 0.6818181818181818
+    },
+    {
+      "scenario": "mass_download",
+      "level": 3,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 10.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 0.3333333333333333,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 3,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 15.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 3,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 8.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 3,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 10.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 3,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 5.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 0.6666666666666666
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 84,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.08333333333333333
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 21,
+      "recall": 0.047619047619047616,
+      "rule_recall": NaN,
+      "ml_recall": 0.5238095238095238
+    },
+    {
+      "scenario": "mass_download",
+      "level": 3,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 10.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 0.6666666666666666,
+      "rule_recall": 0.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 3,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 15.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 3,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 8.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 3,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 10.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 3,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 5.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 81,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.2222222222222222
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 3,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 24,
+      "recall": 0.041666666666666664,
+      "rule_recall": NaN,
+      "ml_recall": 0.7083333333333334
+    },
+    {
+      "scenario": "mass_download",
+      "level": 4,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 50.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 4,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 25.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 4,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 12.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 4,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 30.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 4,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 8.0,
+      "seed": 101,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 83,
+      "recall": 0.012048192771084338,
+      "rule_recall": NaN,
+      "ml_recall": 0.18072289156626506
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 101,
+      "users": 22,
+      "recall": 0.045454545454545456,
+      "rule_recall": NaN,
+      "ml_recall": 0.6363636363636364
+    },
+    {
+      "scenario": "mass_download",
+      "level": 4,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 50.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 4,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 25.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 4,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 12.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 4,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 30.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 4,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 8.0,
+      "seed": 102,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 84,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.15476190476190477
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 102,
+      "users": 21,
+      "recall": 0.047619047619047616,
+      "rule_recall": NaN,
+      "ml_recall": 0.7142857142857143
+    },
+    {
+      "scenario": "mass_download",
+      "level": 4,
+      "intensity_field": "mass_download_multiplier",
+      "intensity": 50.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "after_hours",
+      "level": 4,
+      "intensity_field": "after_hours_events_per_night",
+      "intensity": 25.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "cross_department_sensitive",
+      "level": 4,
+      "intensity_field": "cross_department_accesses_per_day",
+      "intensity": 12.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "new_device_transfer",
+      "level": 4,
+      "intensity_field": "new_device_transfers_per_day",
+      "intensity": 30.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "slow_drip",
+      "level": 4,
+      "intensity_field": "slow_drip_extra_per_day",
+      "intensity": 8.0,
+      "seed": 103,
+      "users": 3,
+      "recall": 1.0,
+      "rule_recall": 1.0,
+      "ml_recall": 1.0
+    },
+    {
+      "scenario": "(reference) normal users",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 81,
+      "recall": 0.0,
+      "rule_recall": NaN,
+      "ml_recall": 0.18518518518518517
+    },
+    {
+      "scenario": "(reference) hard negatives",
+      "level": 4,
+      "intensity_field": "",
+      "intensity": NaN,
+      "seed": 103,
+      "users": 24,
+      "recall": 0.041666666666666664,
+      "rule_recall": NaN,
+      "ml_recall": 0.7083333333333334
+    }
+  ],
+  "rq3": [
+    {
+      "group_type": "department",
+      "group": "Administration",
+      "users": 82,
+      "flagged": 8,
+      "fp_rate": 0.0975609756097561
+    },
+    {
+      "group_type": "department",
+      "group": "Engineering",
+      "users": 52,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "department",
+      "group": "Finance",
+      "users": 64,
+      "flagged": 4,
+      "fp_rate": 0.0625
+    },
+    {
+      "group_type": "department",
+      "group": "HR",
+      "users": 54,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "department",
+      "group": "IT",
+      "users": 53,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "department",
+      "group": "Legal",
+      "users": 55,
+      "flagged": 1,
+      "fp_rate": 0.01818181818181818
+    },
+    {
+      "group_type": "department",
+      "group": "Manufacturing",
+      "users": 199,
+      "flagged": 7,
+      "fp_rate": 0.035175879396984924
+    },
+    {
+      "group_type": "department",
+      "group": "PurchasingAndContracts",
+      "users": 17,
+      "flagged": 2,
+      "fp_rate": 0.11764705882352941
+    },
+    {
+      "group_type": "department",
+      "group": "ResearchAndEngineering",
+      "users": 314,
+      "flagged": 16,
+      "fp_rate": 0.050955414012738856
+    },
+    {
+      "group_type": "department",
+      "group": "Sales",
+      "users": 50,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "department",
+      "group": "SalesAndMarketing",
+      "users": 303,
+      "flagged": 16,
+      "fp_rate": 0.052805280528052806
+    },
+    {
+      "group_type": "department",
+      "group": "unknown",
+      "users": 2,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "hard_negative",
+      "group": "benign_new_hire",
+      "users": 9,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "hard_negative",
+      "group": "benign_on_call",
+      "users": 9,
+      "flagged": 0,
+      "fp_rate": 0.0
+    },
+    {
+      "group_type": "hard_negative",
+      "group": "benign_quarter_end",
+      "users": 49,
+      "flagged": 4,
+      "fp_rate": 0.08163265306122448
+    }
+  ],
+  "rq4": [
+    {
+      "dataset": "synthetic-seed101",
+      "writer": "template",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 0.03562488349962223
+    },
+    {
+      "dataset": "synthetic-seed101",
+      "writer": "ollama:gemma4",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 5.735431154300386
+    },
+    {
+      "dataset": "synthetic-seed101",
+      "writer": "ollama:llama3.2",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 2.8201898707997315
+    },
+    {
+      "dataset": "cert_r4.2",
+      "writer": "template",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 0.07727893740047875
+    },
+    {
+      "dataset": "cert_r4.2",
+      "writer": "ollama:gemma4",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 6.517378824899788
+    },
+    {
+      "dataset": "cert_r4.2",
+      "writer": "ollama:llama3.2",
+      "cases": 10,
+      "rubric_pass_rate": 1.0,
+      "clear": 1.0,
+      "evidence_based": 1.0,
+      "actionable": 1.0,
+      "safe": 1.0,
+      "unsupported_rate": 0.0,
+      "benign_grounded_rate": 1.0,
+      "fallback_rate": 0.0,
+      "mean_seconds": 2.8405647498999316
+    }
+  ],
+  "fallback_reasons": {},
+  "demo": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "cases": [
+      {
+        "name": "Mass download",
+        "user_id": "U0084",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0084-2026-09-18",
+        "generated_by": "ollama:gemma4",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      },
+      {
+        "name": "After-hours activity",
+        "user_id": "U0038",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0038-2026-09-18",
+        "generated_by": "ollama:gemma4",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      },
+      {
+        "name": "Cross-department sensitive access",
+        "user_id": "U0061",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0061-2026-09-18",
+        "generated_by": "ollama:gemma4",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      },
+      {
+        "name": "Transfers from a new device",
+        "user_id": "U0035",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0035-2026-09-28",
+        "generated_by": "ollama:gemma4",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      },
+      {
+        "name": "Hard negative: on-call night work",
+        "user_id": "U0018",
+        "status": "passed",
+        "details": [],
+        "risk_level": "Low",
+        "case_id": "",
+        "generated_by": "",
+        "rubric": {}
+      },
+      {
+        "name": "Clean control: normal user",
+        "user_id": "U0003",
+        "status": "passed",
+        "details": [],
+        "risk_level": "Low",
+        "case_id": "",
+        "generated_by": "",
+        "rubric": {}
+      },
+      {
+        "name": "CERT insider",
+        "user_id": "U0002",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0002-2010-07-08",
+        "generated_by": "ollama:gemma4",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      },
+      {
+        "name": "Privacy Lint trap",
+        "user_id": "U0084",
+        "status": "passed",
+        "details": [],
+        "risk_level": "High",
+        "case_id": "CASE-U0084-2026-09-18",
+        "generated_by": "template (fallback from trap-llm: privacy lint: malicious)",
+        "rubric": {
+          "clear": true,
+          "evidence_based": true,
+          "actionable": true,
+          "safe": true
+        }
+      }
+    ]
+  },
+  "hitl": {
+    "cases_checked": 60,
+    "violations": 0
+  },
+  "error_analysis": [
+    {
+      "dataset": "synthetic-seed101",
+      "false_positives": 2,
+      "false_negatives": 0,
+      "fp_rule_counts": {
+        "SUSTAINED_INCREASE": 2
+      },
+      "fp_top_rule_combinations": {
+        "SUSTAINED_INCREASE": 2
+      },
+      "false_negative_users": []
+    },
+    {
+      "dataset": "cert_r4.2",
+      "false_positives": 49,
+      "false_negatives": 2,
+      "fp_rule_counts": {
+        "AFTER_HOURS": 37,
+        "EXECUTABLE_TO_USB": 33,
+        "SUSTAINED_INCREASE": 9,
+        "OTHER_USER_PC": 6,
+        "NEW_DEVICE_TRANSFER": 5,
+        "NEW_USB_USER": 2
+      },
+      "fp_top_rule_combinations": {
+        "AFTER_HOURS, EXECUTABLE_TO_USB": 20,
+        "AFTER_HOURS": 10,
+        "SUSTAINED_INCREASE, EXECUTABLE_TO_USB": 5,
+        "AFTER_HOURS, OTHER_USER_PC, EXECUTABLE_TO_USB": 3,
+        "AFTER_HOURS, NEW_DEVICE_TRANSFER": 2
+      },
+      "false_negative_users": [
+        {
+          "user_id": "U0290",
+          "scenario": "cert_scenario_2",
+          "risk_score": 15.0,
+          "rules": "EXECUTABLE_TO_USB"
+        },
+        {
+          "user_id": "U0980",
+          "scenario": "cert_scenario_2",
+          "risk_score": 15.0,
+          "rules": "EXECUTABLE_TO_USB"
+        }
+      ]
+    }
+  ]
+}

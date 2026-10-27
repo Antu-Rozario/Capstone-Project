@@ -1,0 +1,7 @@
+dataset,writer,cases,rubric_pass_rate,clear,evidence_based,actionable,safe,unsupported_rate,benign_grounded_rate,fallback_rate,mean_seconds
+synthetic-seed101,template,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.03562488349962223
+synthetic-seed101,ollama:gemma4,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,5.735431154300386
+synthetic-seed101,ollama:llama3.2,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,2.8201898707997315
+cert_r4.2,template,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,0.07727893740047875
+cert_r4.2,ollama:gemma4,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,6.517378824899788
+cert_r4.2,ollama:llama3.2,10,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.0,2.8405647498999316

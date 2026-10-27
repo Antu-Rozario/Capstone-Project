@@ -1,0 +1,4 @@
+employee_name,user_id,email,role,business_unit,functional_unit,department,team,supervisor
+Fake Person Two,BBB0002,Fake.Person.Two@dtaa.com,SalesManager,1,5 - SalesAndMarketing,2 - Sales,3 - RegionalSales,Fake Boss
+Fake Person Three,CCC0003,Fake.Person.Three@dtaa.com,Scientist,1,2 - ResearchAndEngineering,1 - Research,2 - Research,Fake Boss
+Fake Person Four,DDD0004,Fake.Person.Four@dtaa.com,President,1,,,,

@@ -1,0 +1,16 @@
+group_type,group,users,flagged,fp_rate
+department,Administration,82,8,0.0975609756097561
+department,Engineering,52,0,0.0
+department,Finance,64,4,0.0625
+department,HR,54,0,0.0
+department,IT,53,0,0.0
+department,Legal,55,1,0.01818181818181818
+department,Manufacturing,199,7,0.035175879396984924
+department,PurchasingAndContracts,17,2,0.11764705882352941
+department,ResearchAndEngineering,314,16,0.050955414012738856
+department,Sales,50,0,0.0
+department,SalesAndMarketing,303,16,0.052805280528052806
+department,unknown,2,0,0.0
+hard_negative,benign_new_hire,9,0,0.0
+hard_negative,benign_on_call,9,0,0.0
+hard_negative,benign_quarter_end,49,4,0.08163265306122448

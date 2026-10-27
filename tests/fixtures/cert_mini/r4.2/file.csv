@@ -1,0 +1,4 @@
+id,date,user,pc,filename,content
+{F1},01/05/2010 23:35:00,AAA0001,PC-0002,ABCD1234.doc,D0-CF-11-E0 fake keywords here
+{F2},01/05/2010 23:36:00,AAA0001,PC-0002,EFGH5678.exe,4D-5A more fake keywords
+{F3},01/04/2010 10:00:00,BBB0002,PC-0002,IJKL9012.zip,50-4B zipped words

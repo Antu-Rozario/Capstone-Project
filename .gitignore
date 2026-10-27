@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.DS_Store
+# CERT licence forbids redistribution: never commit the dataset or anything derived row-by-row from it
+data/
+# Course handouts (Laurentian): kept locally, not published in this public repo
+Group 8A.pdf
+notes/*.pdf

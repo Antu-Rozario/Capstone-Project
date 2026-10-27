@@ -1,0 +1,106 @@
+scenario,level,intensity_field,intensity,seed,users,recall,rule_recall,ml_recall
+mass_download,0,mass_download_multiplier,2.0,101,3,0.0,0.0,0.3333333333333333
+after_hours,0,after_hours_events_per_night,2.0,101,3,0.0,0.0,0.6666666666666666
+cross_department_sensitive,0,cross_department_accesses_per_day,1.0,101,3,0.3333333333333333,0.0,0.6666666666666666
+new_device_transfer,0,new_device_transfers_per_day,2.0,101,3,0.0,0.0,0.6666666666666666
+slow_drip,0,slow_drip_extra_per_day,1.0,101,3,0.3333333333333333,0.3333333333333333,0.3333333333333333
+(reference) normal users,0,,,101,83,0.0,,0.18072289156626506
+(reference) hard negatives,0,,,101,22,0.045454545454545456,,0.6363636363636364
+mass_download,0,mass_download_multiplier,2.0,102,3,0.0,0.0,0.6666666666666666
+after_hours,0,after_hours_events_per_night,2.0,102,3,0.0,0.0,1.0
+cross_department_sensitive,0,cross_department_accesses_per_day,1.0,102,3,0.0,0.0,0.6666666666666666
+new_device_transfer,0,new_device_transfers_per_day,2.0,102,3,0.0,0.0,0.6666666666666666
+slow_drip,0,slow_drip_extra_per_day,1.0,102,3,0.0,0.0,0.3333333333333333
+(reference) normal users,0,,,102,84,0.0,,0.17857142857142858
+(reference) hard negatives,0,,,102,21,0.0,,0.5714285714285714
+mass_download,0,mass_download_multiplier,2.0,103,3,0.0,0.0,0.6666666666666666
+after_hours,0,after_hours_events_per_night,2.0,103,3,0.0,0.0,1.0
+cross_department_sensitive,0,cross_department_accesses_per_day,1.0,103,3,0.0,0.0,0.6666666666666666
+new_device_transfer,0,new_device_transfers_per_day,2.0,103,3,0.0,0.0,0.6666666666666666
+slow_drip,0,slow_drip_extra_per_day,1.0,103,3,0.3333333333333333,0.3333333333333333,0.3333333333333333
+(reference) normal users,0,,,103,81,0.0,,0.24691358024691357
+(reference) hard negatives,0,,,103,24,0.041666666666666664,,0.7083333333333334
+mass_download,1,mass_download_multiplier,3.0,101,3,0.0,0.0,1.0
+after_hours,1,after_hours_events_per_night,4.0,101,3,1.0,1.0,0.6666666666666666
+cross_department_sensitive,1,cross_department_accesses_per_day,2.0,101,3,0.0,0.0,0.6666666666666666
+new_device_transfer,1,new_device_transfers_per_day,4.0,101,3,0.0,0.0,0.6666666666666666
+slow_drip,1,slow_drip_extra_per_day,2.0,101,3,0.3333333333333333,0.3333333333333333,0.0
+(reference) normal users,1,,,101,83,0.0,,0.1927710843373494
+(reference) hard negatives,1,,,101,22,0.0,,0.6363636363636364
+mass_download,1,mass_download_multiplier,3.0,102,3,0.0,0.0,0.3333333333333333
+after_hours,1,after_hours_events_per_night,4.0,102,3,1.0,1.0,1.0
+cross_department_sensitive,1,cross_department_accesses_per_day,2.0,102,3,0.0,0.0,0.6666666666666666
+new_device_transfer,1,new_device_transfers_per_day,4.0,102,3,0.3333333333333333,0.0,0.3333333333333333
+slow_drip,1,slow_drip_extra_per_day,2.0,102,3,0.3333333333333333,0.3333333333333333,0.6666666666666666
+(reference) normal users,1,,,102,84,0.0,,0.15476190476190477
+(reference) hard negatives,1,,,102,21,0.047619047619047616,,0.47619047619047616
+mass_download,1,mass_download_multiplier,3.0,103,3,0.0,0.0,0.3333333333333333
+after_hours,1,after_hours_events_per_night,4.0,103,3,1.0,1.0,1.0
+cross_department_sensitive,1,cross_department_accesses_per_day,2.0,103,3,0.0,0.0,1.0
+new_device_transfer,1,new_device_transfers_per_day,4.0,103,3,0.0,0.0,0.6666666666666666
+slow_drip,1,slow_drip_extra_per_day,2.0,103,3,0.6666666666666666,0.6666666666666666,0.0
+(reference) normal users,1,,,103,81,0.0,,0.1728395061728395
+(reference) hard negatives,1,,,103,24,0.041666666666666664,,0.5416666666666666
+mass_download,2,mass_download_multiplier,5.0,101,3,0.0,0.0,1.0
+after_hours,2,after_hours_events_per_night,8.0,101,3,1.0,1.0,1.0
+cross_department_sensitive,2,cross_department_accesses_per_day,4.0,101,3,0.0,0.0,1.0
+new_device_transfer,2,new_device_transfers_per_day,6.0,101,3,1.0,1.0,0.6666666666666666
+slow_drip,2,slow_drip_extra_per_day,3.0,101,3,0.3333333333333333,0.3333333333333333,0.6666666666666666
+(reference) normal users,2,,,101,83,0.0,,0.25301204819277107
+(reference) hard negatives,2,,,101,22,0.0,,0.5909090909090909
+mass_download,2,mass_download_multiplier,5.0,102,3,0.0,0.0,0.3333333333333333
+after_hours,2,after_hours_events_per_night,8.0,102,3,1.0,1.0,1.0
+cross_department_sensitive,2,cross_department_accesses_per_day,4.0,102,3,0.0,0.0,1.0
+new_device_transfer,2,new_device_transfers_per_day,6.0,102,3,1.0,1.0,0.6666666666666666
+slow_drip,2,slow_drip_extra_per_day,3.0,102,3,0.6666666666666666,0.6666666666666666,0.6666666666666666
+(reference) normal users,2,,,102,84,0.0,,0.2261904761904762
+(reference) hard negatives,2,,,102,21,0.0,,0.6666666666666666
+mass_download,2,mass_download_multiplier,5.0,103,3,0.0,0.0,0.6666666666666666
+after_hours,2,after_hours_events_per_night,8.0,103,3,1.0,1.0,1.0
+cross_department_sensitive,2,cross_department_accesses_per_day,4.0,103,3,0.0,0.0,1.0
+new_device_transfer,2,new_device_transfers_per_day,6.0,103,3,1.0,1.0,1.0
+slow_drip,2,slow_drip_extra_per_day,3.0,103,3,0.6666666666666666,0.6666666666666666,0.3333333333333333
+(reference) normal users,2,,,103,81,0.0,,0.09876543209876543
+(reference) hard negatives,2,,,103,24,0.08333333333333333,,0.7916666666666666
+mass_download,3,mass_download_multiplier,10.0,101,3,1.0,0.6666666666666666,1.0
+after_hours,3,after_hours_events_per_night,15.0,101,3,1.0,1.0,1.0
+cross_department_sensitive,3,cross_department_accesses_per_day,8.0,101,3,1.0,1.0,1.0
+new_device_transfer,3,new_device_transfers_per_day,10.0,101,3,1.0,1.0,1.0
+slow_drip,3,slow_drip_extra_per_day,5.0,101,3,1.0,1.0,1.0
+(reference) normal users,3,,,101,83,0.0,,0.1927710843373494
+(reference) hard negatives,3,,,101,22,0.045454545454545456,,0.6818181818181818
+mass_download,3,mass_download_multiplier,10.0,102,3,0.3333333333333333,0.0,1.0
+after_hours,3,after_hours_events_per_night,15.0,102,3,1.0,1.0,1.0
+cross_department_sensitive,3,cross_department_accesses_per_day,8.0,102,3,1.0,1.0,1.0
+new_device_transfer,3,new_device_transfers_per_day,10.0,102,3,1.0,1.0,1.0
+slow_drip,3,slow_drip_extra_per_day,5.0,102,3,1.0,1.0,0.6666666666666666
+(reference) normal users,3,,,102,84,0.0,,0.08333333333333333
+(reference) hard negatives,3,,,102,21,0.047619047619047616,,0.5238095238095238
+mass_download,3,mass_download_multiplier,10.0,103,3,0.6666666666666666,0.0,1.0
+after_hours,3,after_hours_events_per_night,15.0,103,3,1.0,1.0,1.0
+cross_department_sensitive,3,cross_department_accesses_per_day,8.0,103,3,1.0,1.0,1.0
+new_device_transfer,3,new_device_transfers_per_day,10.0,103,3,1.0,1.0,1.0
+slow_drip,3,slow_drip_extra_per_day,5.0,103,3,1.0,1.0,1.0
+(reference) normal users,3,,,103,81,0.0,,0.2222222222222222
+(reference) hard negatives,3,,,103,24,0.041666666666666664,,0.7083333333333334
+mass_download,4,mass_download_multiplier,50.0,101,3,1.0,1.0,1.0
+after_hours,4,after_hours_events_per_night,25.0,101,3,1.0,1.0,1.0
+cross_department_sensitive,4,cross_department_accesses_per_day,12.0,101,3,1.0,1.0,1.0
+new_device_transfer,4,new_device_transfers_per_day,30.0,101,3,1.0,1.0,1.0
+slow_drip,4,slow_drip_extra_per_day,8.0,101,3,1.0,1.0,1.0
+(reference) normal users,4,,,101,83,0.012048192771084338,,0.18072289156626506
+(reference) hard negatives,4,,,101,22,0.045454545454545456,,0.6363636363636364
+mass_download,4,mass_download_multiplier,50.0,102,3,1.0,1.0,1.0
+after_hours,4,after_hours_events_per_night,25.0,102,3,1.0,1.0,1.0
+cross_department_sensitive,4,cross_department_accesses_per_day,12.0,102,3,1.0,1.0,1.0
+new_device_transfer,4,new_device_transfers_per_day,30.0,102,3,1.0,1.0,1.0
+slow_drip,4,slow_drip_extra_per_day,8.0,102,3,1.0,1.0,1.0
+(reference) normal users,4,,,102,84,0.0,,0.15476190476190477
+(reference) hard negatives,4,,,102,21,0.047619047619047616,,0.7142857142857143
+mass_download,4,mass_download_multiplier,50.0,103,3,1.0,1.0,1.0
+after_hours,4,after_hours_events_per_night,25.0,103,3,1.0,1.0,1.0
+cross_department_sensitive,4,cross_department_accesses_per_day,12.0,103,3,1.0,1.0,1.0
+new_device_transfer,4,new_device_transfers_per_day,30.0,103,3,1.0,1.0,1.0
+slow_drip,4,slow_drip_extra_per_day,8.0,103,3,1.0,1.0,1.0
+(reference) normal users,4,,,103,81,0.0,,0.18518518518518517
+(reference) hard negatives,4,,,103,24,0.041666666666666664,,0.7083333333333334

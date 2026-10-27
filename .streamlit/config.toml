@@ -1,0 +1,8 @@
+# Privacy: no telemetry, and only reachable from this machine.
+[browser]
+gatherUsageStats = false
+
+[server]
+address = "localhost"
+port = 8501
+headless = true

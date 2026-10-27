@@ -1,0 +1,72 @@
+{
+  "verified": false,
+  "attack_version": null,
+  "nist_revision": "SP 800-53 Rev. 5",
+  "verified_by": null,
+  "verified_on": null,
+  "note": "Draft mapping written from memory; every ID must be verified against the current MITRE ATT&CK release and NIST SP 800-53 Rev. 5 before reporting (FR-11). Techniques describe activity the Finding is consistent with, never a conclusion about the user.",
+  "mappings": {
+    "MASS_DOWNLOAD": {
+      "attack": [
+        {"id": "T1039", "name": "Data from Network Shared Drive"},
+        {"id": "T1213", "name": "Data from Information Repositories"}
+      ],
+      "nist": [
+        {"id": "AU-6", "name": "Audit Record Review, Analysis, and Reporting"},
+        {"id": "AC-6", "name": "Least Privilege"}
+      ]
+    },
+    "AFTER_HOURS": {
+      "attack": [{"id": "T1078", "name": "Valid Accounts"}],
+      "nist": [
+        {"id": "AC-2(12)", "name": "Account Monitoring for Atypical Usage"},
+        {"id": "AU-6", "name": "Audit Record Review, Analysis, and Reporting"}
+      ]
+    },
+    "CROSS_DEPT_SENSITIVE": {
+      "attack": [{"id": "T1213", "name": "Data from Information Repositories"}],
+      "nist": [
+        {"id": "AC-6", "name": "Least Privilege"},
+        {"id": "AC-3", "name": "Access Enforcement"}
+      ]
+    },
+    "NEW_DEVICE_TRANSFER": {
+      "attack": [
+        {"id": "T1052.001", "name": "Exfiltration Over Physical Medium: Exfiltration over USB"},
+        {"id": "T1567.002", "name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage"}
+      ],
+      "nist": [
+        {"id": "MP-7", "name": "Media Use"},
+        {"id": "SC-7(10)", "name": "Boundary Protection: Prevent Exfiltration"}
+      ]
+    },
+    "SUSTAINED_INCREASE": {
+      "attack": [{"id": "T1074", "name": "Data Staged"}],
+      "nist": [
+        {"id": "AU-6", "name": "Audit Record Review, Analysis, and Reporting"},
+        {"id": "PM-12", "name": "Insider Threat Program"}
+      ]
+    },
+    "NEW_USB_USER": {
+      "attack": [{"id": "T1052.001", "name": "Exfiltration Over Physical Medium: Exfiltration over USB"}],
+      "nist": [
+        {"id": "MP-7", "name": "Media Use"},
+        {"id": "AU-6", "name": "Audit Record Review, Analysis, and Reporting"}
+      ]
+    },
+    "OTHER_USER_PC": {
+      "attack": [{"id": "T1078", "name": "Valid Accounts"}],
+      "nist": [
+        {"id": "AC-2(12)", "name": "Account Monitoring for Atypical Usage"},
+        {"id": "AC-6", "name": "Least Privilege"}
+      ]
+    },
+    "EXECUTABLE_TO_USB": {
+      "attack": [{"id": "T1091", "name": "Replication Through Removable Media"}],
+      "nist": [
+        {"id": "MP-7", "name": "Media Use"},
+        {"id": "SI-3", "name": "Malicious Code Protection"}
+      ]
+    }
+  }
+}

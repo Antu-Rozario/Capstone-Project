@@ -1,0 +1,50 @@
+flowchart TB
+    subgraph DATA["1 · Data"]
+        direction LR
+        GEN["Synthetic generator<br/>5 scenarios + 3 hard negatives"]
+        CERT["CERT r4.2 loader<br/>file · USB · logon · LDAP"]
+    end
+    EVENTS[("Events<br/>shared schema<br/>(labels kept apart)")]
+    GEN --> EVENTS
+    CERT --> EVENTS
+
+    subgraph DETECT["2 · Detection"]
+        direction LR
+        FEAT["Daily features<br/>per user"] --> BASE["Baselines<br/>own history · dept fallback"]
+        BASE --> RULES["8 rules → Findings<br/>observed vs expected"]
+        BASE --> ML["ML detector<br/>IsolationForest · z-score · LOF · OC-SVM"]
+        RULES --> SCORE["Risk Score 0–100<br/>+ ranking"]
+        ML -. "raises, never creates" .-> SCORE
+    end
+    EVENTS --> FEAT
+
+    subgraph AGENT["3 · Explanation agent"]
+        direction LR
+        TOOLS["Tools<br/>get_user_context · search_policy · lookup_control_mapping"]
+        LLM["gemma4 (local)<br/>writes narrative only"]
+        CHECK{"Privacy Lint<br/>+ number check"}
+        TPL["Grounded template"]
+        TOOLS --> LLM --> CHECK
+        CHECK -- fail --> TPL
+    end
+    RAG[("Policy RAG<br/>TF-IDF + embeddinggemma · FAISS<br/>12 docs · citations")]
+    MAP[("ATT&CK / NIST<br/>control mapping")]
+    SCORE --> TOOLS
+    TOOLS <--> RAG
+    TOOLS <--> MAP
+
+    CASE["Case Summary (JSON)<br/>status: pending_review"]
+    CHECK -- pass --> CASE
+    TPL --> CASE
+
+    subgraph HUMAN["4 · Human in the loop"]
+        direction LR
+        UI["Streamlit dashboard"] --> REVIEW{"Reviewer decision"}
+        REVIEW -- approved --> UNLOCK["Sensitive actions authorised"]
+        REVIEW -- "rejected / more info" --> LOCKED["Actions stay locked"]
+    end
+    CASE --> UI
+
+    EVAL["5 · Evaluation<br/>metrics · rubric · 8 demo cases · RQ1–RQ4 · blind rating"]
+    SCORE -.-> EVAL
+    CASE -.-> EVAL

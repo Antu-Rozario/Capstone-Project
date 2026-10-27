@@ -6,3 +6,7 @@ gatherUsageStats = false
 address = "localhost"
 port = 8501
 headless = true
+
+# Hide the "Deploy" button and developer menu: this is a local demo, not a hosted app.
+[client]
+toolbarMode = "minimal"

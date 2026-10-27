@@ -6,6 +6,8 @@ A user and entity behaviour analytics (UEBA) agent that learns what normal file 
 
 > The system describes *activity*, never people's intent. A high Risk Score means "this activity deviates from this person's usual pattern and is worth a human look", not "this person is a threat".
 
+![Risk ranking in the dashboard](docs/screenshots/01-ranking.png)
+
 ---
 
 ## Contents
@@ -16,6 +18,7 @@ A user and entity behaviour analytics (UEBA) agent that learns what normal file 
 - [Installation](#installation)
 - [Data setup](#data-setup)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
 - [Results so far](#results-so-far)
 - [Project structure](#project-structure)
 - [Testing](#testing)
@@ -56,23 +59,9 @@ Status: ✅ done · 🚧 in progress · ⏳ planned. Full requirements are in [R
 
 ## How it works
 
-```
- Synthetic generator ────────┐
- CERT r4.2 ──► CERT loader ──┼──► Events (shared schema) ──► Daily features ──► Baselines
- App audit log ──► importer ─┘        + Labels (separate)                            │
-                                                                                     ▼
-                                                     Rules → Findings (evidence)  +  ML detector
-                                                                       │
-                                                                       ▼
-                                                          Risk Score + ranked users
-                                                                       │
-              ┌─ get_user_context ◄── Findings / Baselines              ▼
- Agent tools ─┼─ search_policy ◄───── Policy RAG (embeddinggemma + FAISS)   Explanation Agent (Ollama gemma4)
-              └─ lookup_control_mapping ◄── ATT&CK / NIST                            │
-                                                                                     ▼
-                                Streamlit dashboard ◄── Case Summary (JSON, pending_review) ◄── Privacy Lint
-                                         └──► Human Review Decision ──► authorised actions
-```
+![Architecture: data → detection → explanation agent → human review → evaluation](docs/architecture.png)
+
+The diagram source is [docs/architecture.mmd](docs/architecture.mmd) (Mermaid). After editing it, regenerate the image with `.venv/bin/python scripts/render_architecture.py`.
 
 **Detection in brief:**
 
@@ -96,7 +85,7 @@ Status: ✅ done · 🚧 in progress · ⏳ planned. Full requirements are in [R
 
 ```bash
 # 1. Clone
-git clone <repo-url> ueba-insider-threat && cd ueba-insider-threat
+git clone https://github.com/farhadabbasiamiri/Insider-Threat-File-Access-UEBA-Agent.git && cd Insider-Threat-File-Access-UEBA-Agent
 
 # 2. Install dependencies into .venv (Python 3.11 is installed automatically)
 uv sync
@@ -241,9 +230,33 @@ Cases are saved as JSON in `data/cases/<dataset>/`.
 6. Enter a Reviewer name and approve the case.
 7. Show the actions turn ✅ authorised.
 
+## Screenshots
+
+All screenshots use the synthetic dataset; CERT-derived user activity is never shown (CERT licence). They follow the demo story above. Regenerate them with `.venv/bin/python scripts/take_screenshots.py`, which runs its own dashboard with temporary review and rating files. It needs Playwright's Chromium: run `.venv/bin/python -m playwright install chromium` once if it isn't installed.
+
+**1. Investigation:** daily activity against the user's baseline (Detection Window shaded), and each Finding with its evidence and ATT&CK/NIST mapping.
+
+![Investigation tab](docs/screenshots/02-investigation.png)
+
+**2. Case Summary:** written by gemma4 and passed the Privacy Lint. Actions that affect the person are 🔒 locked until review.
+
+![Case Summary with locked actions](docs/screenshots/03-case-summary.png)
+
+**3. After the Reviewer approves:** every action is ✅ authorised, and the decision is recorded with name, notes and time.
+
+![Approved case](docs/screenshots/04-approved.png)
+
+**4. Evaluation tab:** metrics against the Ground-truth Labels and the fairness check.
+
+![Evaluation tab](docs/screenshots/05-evaluation.png)
+
+**5. Policy search:** hybrid RAG returns citable policy passages.
+
+![Policy search](docs/screenshots/06-policy-search.png)
+
 ## Results so far
 
-Full report: [reports/evaluation.md](reports/evaluation.md). Interpretation and caveats: [docs/experiment-log.md](docs/experiment-log.md) (E1–E3). A user counts as flagged at risk level Medium or above.
+Full report: [reports/evaluation.md](reports/evaluation.md). Interpretation and caveats: [docs/experiment-log.md](docs/experiment-log.md) (E1–E4). A user counts as flagged at risk level Medium or above.
 
 | Measure | Result |
 |---|---|
@@ -259,6 +272,10 @@ Full report: [reports/evaluation.md](reports/evaluation.md). Interpretation and 
 - **RQ2, how faint an anomaly can be:** after-hours activity is caught from 4 events per night, but mass downloads only from about 10× normal. The ML detector alone looks more sensitive, but it flags 17–20% of normal users, which justifies "ML raises a score, never creates one".
 - **RQ3, fairness:** on-call staff and new hires are never flagged. Quarter-end Finance users are flagged 8.2% of the time, because a department-wide rush resembles a personal increase. That's future work.
 - **RQ4, narratives:** the template, gemma4 (8B) and llama3.2 (3B) all score 100% on the automated rubric, even though llama3.2's summaries are visibly weaker (rule names instead of evidence, repetitive). The automated rubric measures safety, not quality. A blind human rating set of 18 items is ready for the team to rate.
+
+| RQ1: detectors | RQ2: recall vs anomaly strength | RQ3: false positives |
+|---|---|---|
+| ![RQ1](reports/rq1_detectors.png) | ![RQ2](reports/rq2_sensitivity.png) | ![RQ3](reports/rq3_fairness.png) |
 
 **Read these with care:**
 
@@ -298,6 +315,8 @@ The automated rubric can't tell the narrative writers apart, so RQ4 also uses a 
 
 Raters also tick a box when the summary contains a claim the evidence doesn't support.
 
+![Blind rating page](docs/screenshots/07-rating.png)
+
 **Limitation:** the template's fixed wording is recognisable, so blinding fully separates the LLMs from each other but only partly separates them from the template.
 
 ## Project structure
@@ -310,7 +329,9 @@ Raters also tick a box when the summary contains a claim the evidence doesn't su
 ├── notes/                  ← course notes, grading rubric, resources (local only, not published)
 ├── docs/
 │   ├── data-card.md        ← both data sources: provenance, licence, mapping, limitations
-│   └── experiment-log.md   ← every result-changing experiment (E1–E3), before/after numbers
+│   ├── experiment-log.md   ← every result-changing experiment (E1–E4), before/after numbers
+│   ├── architecture.mmd/.png ← architecture diagram (Mermaid source + rendered image)
+│   └── screenshots/        ← README screenshots (generated)
 ├── policies/               ← policy corpus for RAG: 4 general documents + playbooks/ (one per rule)
 ├── mappings/controls.json  ← ATT&CK / NIST mapping (draft, awaiting verification)
 ├── .streamlit/config.toml  ← dashboard privacy settings (no telemetry, localhost only)
@@ -338,6 +359,7 @@ Raters also tick a box when the summary contains a claim the evidence doesn't su
 │   ├── rating.py           ← blind human rating: build set, store ratings, analyse (RQ4)
 │   └── rating_app.py       ← Streamlit rating page for raters
 ├── reports/                ← evaluation.md, plots, CSVs, JSON
+├── scripts/                ← take_screenshots.py, render_architecture.py (Playwright)
 ├── tests/                  ← pytest suite; fixtures are hand-made, never real CERT rows
 └── data/                   ← git-ignored: downloads, processed data, results
 ```

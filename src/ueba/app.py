@@ -284,8 +284,15 @@ with tabs[3]:
             st.markdown("#### False-positive rate by department (fairness check)")
             fp = pd.DataFrame({"department": list(met["fp_rate_by_department"]),
                                "fp_rate": list(met["fp_rate_by_department"].values())})
-            st.altair_chart(alt.Chart(fp).mark_bar().encode(x=alt.X("fp_rate:Q", axis=alt.Axis(format="%")),
-                                                            y=alt.Y("department:N", sort="-x")).properties(height=220))
+            if fp["fp_rate"].max() == 0:
+                st.success("No non-anomalous user was flagged in any department.")
+            else:
+                # Fixed 0..max domain (at least 10%) so small rates stay readable and the axis never collapses.
+                domain = [0, max(0.1, float(fp["fp_rate"].max()))]
+                x = alt.X("fp_rate:Q", title="false-positive rate", scale=alt.Scale(domain=domain),
+                          axis=alt.Axis(format=".0%"))
+                st.altair_chart(alt.Chart(fp).mark_bar().encode(x=x, y=alt.Y("department:N", sort="-x"))
+                                .properties(height=220))
         st.caption("Flagged = Medium or High. See docs/experiment-log.md for caveats about these numbers.")
 
 
